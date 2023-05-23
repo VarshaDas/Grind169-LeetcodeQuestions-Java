@@ -1,6 +1,5 @@
 package Stack;
 
-import java.sql.Time;
 import java.util.Stack;
 
 public class EvaluateReversePolishNotation {
