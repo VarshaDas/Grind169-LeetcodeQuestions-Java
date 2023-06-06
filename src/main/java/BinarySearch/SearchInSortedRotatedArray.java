@@ -4,17 +4,17 @@ public class SearchInSortedRotatedArray {
     /**
      * Search in Rotated Sorted Array:
      * Given a rotated sorted array and a target value, this method searches for the target value in the array.
-     * <p>
+     *
      * Approach: The approach used here is a modified version of the binary search algorithm.
      * We maintain two pointers, left and right, that represent the start and end indices of the subarray we are considering. In each iteration, we calculate the middle index mid. We then compare the target value with the middle element of the subarray. If they are equal, we return the middle index as the result. Otherwise, we check if the left or right half of the subarray is sorted.
-     * <p>
+     *
      * If the left half is sorted, we check if the target value falls within the range of the left half. If it does, we update the right pointer to mid - 1 and continue searching in the left half. Otherwise, we update the left pointer to mid + 1 and continue searching in the right half.
-     * <p>
+     *
      * If the right half is sorted, we check if the target value falls within the range of the right half. If it does, we update the left pointer to mid + 1 and continue searching in the right half. Otherwise, we update the right pointer to mid - 1 and continue searching in the left half.
-     * <p>
+     *
      * Time Complexity: O(log n) The time complexity of this algorithm is logarithmic
      * since we divide the search space in half in each iteration.
-     * <p>
+     *
      * Space Complexity: O(1) The space complexity is constant as we only use a few variables
      * to keep track of indices during the search.
      *
