@@ -24,6 +24,8 @@ public class GroupAnagrams {
      * @return A list of groups where each group contains anagrams.
      *
      * Leetcode link: https://leetcode.com/problems/group-anagrams/description/
+     *
+     *
      */
     public static List<List<String>> groupAnagrams(String[] strs) {
         // Create a hashmap to store the groups of anagrams
