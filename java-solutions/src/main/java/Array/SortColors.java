@@ -41,19 +41,27 @@ import java.util.Arrays;
  */
 public class SortColors {
 
-        public void sortColors(int[] nums) {
-            int n = nums.length;
+    public void sortColors(int[] nums) {
+        int low = 0;
+        int mid = 0;
+        int high = nums.length - 1;
 
-            for (int i = 0; i < n - 1; i++) {
-                for (int j = 0; j < n - i - 1; j++) {
-                    if (nums[j] > nums[j + 1]) {
-                        swap(nums, j, j + 1);
-                    }
-                }
+        while (mid <= high) {
+            if (nums[mid] == 0) {
+                swap(nums, low, mid);
+                low++;
+                mid++;
+            } else if (nums[mid] == 1) {
+                mid++;
+            } else if (nums[mid] == 2) {
+                swap(nums, mid, high);
+                high--;
             }
         }
+    }
 
-        private void swap(int[] nums, int i, int j) {
+
+    private void swap(int[] nums, int i, int j) {
             int temp = nums[i];
             nums[i] = nums[j];
             nums[j] = temp;
