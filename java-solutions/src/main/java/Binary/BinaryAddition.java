@@ -54,10 +54,13 @@ public class BinaryAddition {
     }
 
     public static void main(String[] args) {
-        BinaryAddition binaryAddition = new BinaryAddition();
-        String a = "1010";
-        String b = "1011";
-        String result = binaryAddition.addBinary(a, b);
-        System.out.println("Binary Addition Result: " + result);
+//        BinaryAddition binaryAddition = new BinaryAddition();
+//        String a = "1010";
+//        String b = "1011";
+//        String result = binaryAddition.addBinary(a, b);
+//        System.out.println("Binary Addition Result: " + result);
+        String s1 = "varsha";
+        String s2 = "varsha";
+        System.out.println(s1.equals(s2));
     }
 }
