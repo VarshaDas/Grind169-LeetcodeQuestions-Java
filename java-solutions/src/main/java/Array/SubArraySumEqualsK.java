@@ -36,7 +36,6 @@ import java.util.Map;
  *
  */
 
-
 public class SubArraySumEqualsK {
     public int subarraySum(int[] nums, int k) {
 
@@ -59,6 +58,5 @@ public class SubArraySumEqualsK {
         }
 
         return count;
-
     }
 }
