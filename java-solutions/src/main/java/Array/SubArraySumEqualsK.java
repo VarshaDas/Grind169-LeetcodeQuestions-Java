@@ -25,7 +25,8 @@ import java.util.Map;
  *
  * The key in the HashMap represents the cumulative sum, and the value represents the count of subarrays with that cumulative sum.
  *
- * As we iterate through the array, for each index i, we check if there is a subarray with sum (cumulativeSum - k) that ends at index i. If such a subarray exists, it means we have found a subarray with sum k.
+ * As we iterate through the array, for each index i, we check if there is a subarray with sum (cumulativeSum - k) that ends at index i.
+ * If such a subarray exists, it means we have found a subarray with sum k.
  * We increment the count by the number of subarrays with sum (cumulativeSum - k) that we have encountered so far.
  *
  * Time Complexity: O(n)
