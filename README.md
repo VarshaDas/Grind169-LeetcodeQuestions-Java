@@ -30,11 +30,11 @@ To get started with the "Grind169-LeetcodeQuestions-Java" repository, follow the
 
 4. Open the corresponding Java file in your preferred Integrated Development Environment (IDE) or text editor.
 
-5. Read the problem statement at the beginning of the file to understand the requirements and constraints of the question.
+5. Open a Github PR with a new Leetcode Question and uderstand the requirements and constraints of the question.
 
 6. Analyze the provided solution and the accompanying explanation to gain insights into the approach.
 
-7. Implement your solution or modify the existing solution as per your understanding and coding style.
+7. Implement your solution or modify the existing solution as per your understanding and coding style. 
 
 8. Test your solution with the provided test cases or add additional test cases to validate its correctness and efficiency.
 
