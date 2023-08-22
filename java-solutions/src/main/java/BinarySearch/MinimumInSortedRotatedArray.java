@@ -23,7 +23,7 @@ If the subarray is not sorted, we calculate the middle index mid as the average 
 We compare nums[mid] with nums[high] to determine which half of the array might contain the minimum element.
 
 If nums[mid] > nums[high], it means the pivot point (the point where the rotation occurs) lies between mid and high.
-Hence, the minimum element cannot be present at or after mid. We update low = mid + 1 to search in the right half of the array.
+Hence, the minimum element cannot be present before mid. We update low = mid + 1 to search in the right half of the array.
 
 If nums[mid] <= nums[high], it means the pivot point lies before mid or at mid itself.
 In this case, the minimum element can be at or before mid. We update high = mid to search in the left half of the array.
