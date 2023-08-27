@@ -8,7 +8,7 @@ The idea behind this approach is to traverse the given intervals and identify th
  while maintaining the sorted order. While traversing, merge any overlapping intervals with the new interval.
  This way, we can efficiently merge the intervals in linear time.
 
- Time Complexity:
+Time Complexity:
 
 The time complexity of this approach is O(N), where N is the number of intervals in the given list.
 In the worst case, we may need to traverse all the intervals once to find the correct position to insert the new
