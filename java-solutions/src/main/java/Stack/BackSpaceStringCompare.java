@@ -55,6 +55,8 @@ public class BackSpaceStringCompare {
                 stackT.pop();
             }
         }
+
+
         return stackS.equals(stackT);
     }
 }
