@@ -5,10 +5,8 @@ import java.util.Comparator;
 
 /*
  Leetcode link - https://leetcode.com/problems/non-overlapping-intervals/description/
-
  */
 public class NonOverlappingIntervals {
-
 
         public int eraseOverlapIntervals(int[][] intervals) {
             if(intervals.length <= 1){
