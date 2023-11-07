@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /*
+
+
 The given code aims to find the length of the longest subarray in the given array nums with an equal number of 0s and 1s.
 It uses a technique called prefix sum along with a hashmap to keep track of the count and position of the prefix sums.
 
@@ -17,6 +19,8 @@ of the array nums.
 
 Space Complexity: The space complexity is O(n) because in the worst case, all elements of the array can have distinct
 prefix sums stored in the hashmap.
+
+Leetcode link:
  */
 public class ContiguousArray {
     public int findMaxLength(int[] nums) {
