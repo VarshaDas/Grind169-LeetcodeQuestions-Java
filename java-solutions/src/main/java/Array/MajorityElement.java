@@ -25,7 +25,7 @@ The brute force approach works by examining each element and counting its occurr
 resulting in a time complexity of O(n^2) since we iterate through the array twice. While this approach is simple to implement,
 it may not be efficient for large arrays.
 
-Optimized Solution:
+Optimal Solution:
 We can optimize the algorithm using the Boyer-Moore Voting Algorithm, which has a time complexity of O(n).
 
 Working of the algorithm:

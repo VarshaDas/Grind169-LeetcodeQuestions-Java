@@ -19,7 +19,7 @@ Brute Force Approach:
 
 This approach will not work because there can be zero in the array, and in that case, the total product will be zero.
 
-Optimized Solution:
+Optimal Solution:
 1. Count the number of zeros in the array and store it in a variable count.
 2. Find the total product of the array, excluding the zeros.
 3. For each element in the array, if count is equal to one and the current element is not 0, then set the product of the subarray to 0. This means that zero is present in the subarray. Hence, the product should be 0.

@@ -21,7 +21,7 @@ import java.util.Set;
  * 5. Once we reach the end of the array, display the max value of the counter.
  * 
  * 
- * Optimized Solution: 
+ * Optimal Solution: 
  * To find the longest consecutive sequence, we can use a HashSet to store all the numbers in the array.
  * Then, for each number in the array, we can check if its previous number (number - 1) exists in the HashSet.
  * If it does not exist, it means this number is the starting point of a new sequence.

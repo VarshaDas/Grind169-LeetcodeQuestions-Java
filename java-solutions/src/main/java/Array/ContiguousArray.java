@@ -20,7 +20,7 @@ of the array nums.
 Space Complexity: The space complexity is O(n) because in the worst case, all elements of the array can have distinct
 prefix sums stored in the hashmap.
 
-Leetcode link:
+Leetcode link: 
  */
 public class ContiguousArray {
     public int findMaxLength(int[] nums) {

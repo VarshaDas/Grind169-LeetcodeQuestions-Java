@@ -16,7 +16,7 @@ public class SearchInSortedRotatedArray {
      * @param nums   The rotated sorted array.
      * @param target The target value to search for.
      * @return The index of the target value in the array, or -1 if it is not found.
-     * <p>
+     * 
      * Leetcode link : https://leetcode.com/problems/search-in-rotated-sorted-array/description/
      */
     public static int search(int[] nums, int target) {

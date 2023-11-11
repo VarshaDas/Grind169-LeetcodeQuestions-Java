@@ -5,17 +5,17 @@ public class TrappingRainWater {
      * Trapping Rain Water:
      * Given an elevation map representing the height of bars, this method calculates the total amount
      * of rainwater that can be trapped between the bars.
+     * 
+     * @param heights An array of integers representing the height of the bars.
+     * @return The total amount of rainwater trapped.
      *
-     * Intuition :
+     * Solution:
      * We create two arrays, leftMax and rightMax, to store the maximum height from the left and right side
      * respectively for each bar.
      * By doing so, we can determine the maximum height that water can be trapped at each position.
      * Then, we iterate through each bar and calculate the trapped water by taking the minimum height
      * between the left and right maximums and subtracting the current bar's height.
      * Finally, we sum up the trapped water for each bar and return the total amount.
-     *
-     * @param heights An array of integers representing the height of the bars.
-     * @return The total amount of rainwater trapped.
      *
      * Time Complexity: O(n) The code iterates through the array of heights three times: one for calculating the left maximums,
      * one for calculating the right maximums, and one for calculating the trapped water.

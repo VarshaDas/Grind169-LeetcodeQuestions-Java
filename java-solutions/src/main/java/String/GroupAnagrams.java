@@ -6,13 +6,14 @@ public class GroupAnagrams {
     /**
      * Given an array of strings, this method groups the anagrams together and returns a list of groups.
      *
-     * Approach: The approach used here is based on sorting.
-     * For each word in the input array, we convert it to a character array, sort the array, and then convert it back to a string.
-     * This sorted string serves as a unique key to group anagrams together.
-     * We use a hashmap, where the keys are the sorted strings and the values are lists of words
-     * that have the same sorted string. Finally, we convert the hashmap values to a list of groups and return it.
+     * Approach: 
+     * The approach used here is based on sorting.
+     * 1. For each word in the input array, we convert it to a character array, sort the array, and then convert it back to a string.
+     * 2. This sorted string serves as a unique key to group anagrams together.
+     * 3. We use a hashmap, where the keys are the sorted strings and the values are lists of words that have the same sorted string. 
+     * 4. Finally, we convert the hashmap values to a list of groups and return it.
      *
-     * Time Complexity: O(n * m * log m) Here, n refers to the number of words in the input array,
+     * Time Complexity: O(n * m * log m). Here, n refers to the number of words in the input array,
      * and m refers to the maximum length of a word. Sorting each word takes O(m * log m) time,
      * and we perform this operation for each of the n words. Hence, the overall time complexity is O(n * m * log m).
      *
