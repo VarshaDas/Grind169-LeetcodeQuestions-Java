@@ -10,6 +10,8 @@ import java.util.Arrays;
  We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively.
 
  Approach:
+
+ Brute Force Approach:
  The brute force approach for the "Sort Colors" problem would involve performing a simple comparison-based sorting algorithm,
  such as bubble sort or insertion sort.
  The brute force approach compares adjacent elements in the array and swaps them if they are in the wrong order.
@@ -18,20 +20,22 @@ import java.util.Arrays;
 
  It is not an optimal solution for this problem, as there exists a more efficient algorithm using the Dutch National Flag approach.
 
- This problem can be solved using the Dutch National Flag algorithm, also known as the 3-way partitioning algorithm.
+ Optimal Solution:
+ This problem can be solved in an optimized manner using the Dutch National Flag algorithm, also known as the 3-way partitioning algorithm.
 
  The idea is to maintain three pointers: low, mid, and high. The low pointer represents the boundary of the red color,
  the mid pointer represents the boundary of the white color, and the high pointer represents the boundary of the blue color.
  We iterate through the array and perform the following operations:
 
- If the current element is 0 (red), we swap it with the element at the low pointer and increment both low and mid pointers.
+ 1. If the current element is 0 (red), we swap it with the element at the low pointer and increment both low and mid pointers.
 
- If the current element is 1 (white), we simply increment the mid pointer.
+ 2. If the current element is 1 (white), we simply increment the mid pointer.
 
- If the current element is 2 (blue), we swap it with the element at the high pointer and decrement the high pointer.
+ 3. If the current element is 2 (blue), we swap it with the element at the high pointer and decrement the high pointer.
 
  The algorithm ensures that all elements before the low pointer are red (0), all elements between the low and mid pointers are white (1),
  and all elements after the high pointer are blue (2), resulting in a sorted array.
+ 
  Time Complexity: O(n)
  The algorithm iterates through the array once, performing constant-time operations for each element.
  Space Complexity: O(1)
