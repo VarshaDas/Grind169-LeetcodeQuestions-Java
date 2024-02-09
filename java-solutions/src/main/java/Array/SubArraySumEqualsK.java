@@ -6,23 +6,25 @@ import java.util.Map;
 /**
  * Given an array of integers nums and an integer k, return the total number of continuous subarrays whose sum equals to k.
  *
- * To solve the problem using a brute force approach, we can iterate through all possible subarrays and count the number of subarrays with the target sum.
- *
- * Initialize a variable count to 0, which will keep track of the count of subarrays with the target sum.
- * Iterate through all possible subarrays by using two nested loops:
- * The outer loop will consider the starting index of the subarray from 0 to n-1.
- * The inner loop will consider the ending index of the subarray from the current starting index to n-1.
- * For each subarray, calculate the sum of its elements.
- * If the sum equals the target sum k, increment the count by 1.
+ * Approach:
+ * 
+ * Brute force approach:
+ * To solve the problem using a brute force approach, we can:
+ * 
+ * 1. Initialize a variable count to 0, which will keep track of the count of subarrays with the target sum.
+ * 2. Iterate through all possible subarrays by using two nested loops:
+ * 3. The outer loop will consider the starting index of the subarray from 0 to n-1.
+ * 4. The inner loop will consider the ending index of the subarray from the current starting index to n-1.
+ * 5. For each subarray, calculate the sum of its elements.
+ * 6. If the sum equals the target sum k, increment the count by 1.
  * After iterating through all possible subarrays, the value of count will represent the total number of subarrays with the sum equal to k.
  *
  * The time complexity of the brute force approach is O(n^3), where n is the length of the input array. This is because we have two nested loops and, for each subarray, we calculate the sum by iterating through its element
  *
- *
- * Intuition (for optimal solution):
+ * Optimal Solution:
+ * Intuition:
  * We can solve this problem using the cumulative sum technique. We maintain a running sum of the elements as we iterate through the array.
  * For each index i, we calculate the cumulative sum up to that index and store it in a HashMap.
- *
  * The key in the HashMap represents the cumulative sum, and the value represents the count of subarrays with that cumulative sum.
  *
  * As we iterate through the array, for each index i, we check if there is a subarray with sum (cumulativeSum - k) that ends at index i.
@@ -34,9 +36,10 @@ import java.util.Map;
  *
  * Space Complexity: O(n)
  * The space complexity is O(n) because in the worst case, all the elements in the array could have distinct cumulative sums, and we need to store them in the HashMap.
+ * 
+ * Leetcode Link: https://leetcode.com/problems/subarray-sum-equals-k/
  *
  */
-
 public class SubArraySumEqualsK {
     public int subarraySum(int[] nums, int k) {
 

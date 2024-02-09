@@ -4,19 +4,36 @@ import java.util.HashMap;
 import java.util.Map;
 
 /*
-The given code aims to find the length of the longest subarray in the given array nums with an equal number of 0s and 1s.
-It uses a technique called prefix sum along with a hashmap to keep track of the count and position of the prefix sums.
 
+
+The given code aims to find the length of the longest subarray in the given array nums with an equal number of 0s and 1s.
+
+Approach:
+
+Brute Force Approach:
+The simplest way to solve this probelm is to check for all possible subarrays and update the maximum length whenever a subarray with an equal number of 0s and 1s is found.
+The algorithm is as follows:
+
+1. Iterate through all possible subarrays of the given binary array.
+2. For each subarray, count the number of 0s and 1s.
+3. If the count of 0s is equal to the count of 1s, update the maximum length.
+
+The time complexity of this approach is O(n^2), where n is the length of the array.
+
+Optimal Solution:
+The optimal solution uses a technique called prefix sum along with a hashmap to keep track of the count and position of the prefix sums.
 The key idea behind this approach is to keep track of the count of 0s and 1s encountered so far using a prefix sum.
 Whenever the same count is encountered again, it implies that the subarray between the previous occurrence and
 the current index has an equal number of 0s and 1s. By calculating the length of this subarray for each occurrence of a count,
- we can find the maximum length of such subarrays.
+we can find the maximum length of such subarrays.
 
 Time Complexity: The code iterates through the array once, resulting in a time complexity of O(n), where n is the length
 of the array nums.
 
 Space Complexity: The space complexity is O(n) because in the worst case, all elements of the array can have distinct
 prefix sums stored in the hashmap.
+
+Leetcode link: https://leetcode.com/problems/contiguous-array/
  */
 public class ContiguousArray {
     public int findMaxLength(int[] nums) {
