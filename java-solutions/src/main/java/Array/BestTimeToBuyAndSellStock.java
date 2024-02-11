@@ -25,7 +25,7 @@ package Array;
 
  */
 
-public class BestTimeToBuyAndSellStocks {
+public class BestTimeToBuyAndSellStock {
     public int maxProfit(int[] prices) {
         int minPrice = Integer.MAX_VALUE;
         int maxProfit = 0;
