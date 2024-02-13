@@ -20,6 +20,8 @@ import java.util.Set;
  * 4. If yes, keep incrementing the counter. As soon as some other number is found, update the max value of the counter and break from the loop.
  * 5. Once we reach the end of the array, display the max value of the counter.
  * 
+ * Time complexity of this approach is O(n log n) due to the sorting operation, where n is the number of elements in the array. 
+ * Space complexity is O(1) because the algorithm only uses a constant amount of extra space for variables like the max counter value.
  * 
  * Optimal Solution: 
  * To find the longest consecutive sequence, we can use a HashSet to store all the numbers in the array.

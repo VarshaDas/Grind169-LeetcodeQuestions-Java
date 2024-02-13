@@ -10,7 +10,7 @@ Approach:
 Brute Force Approach:
 The brute force approach behind finding the longest common prefix among a given array of strings is to compare the characters one by one and keep updating the longest common prefix until a mismatch is found or the shortest string is exhausted.
 By iterating through the strings, we can gradually narrow down the common prefix.
-The time complexity of this approach is O(n), where n is the length of the string.
+The time complexity of this approach is O(n^2), where n is the number of strings in the array.
 
 Optimal Solution:
 The intuition for the optimal approach used in the code:
