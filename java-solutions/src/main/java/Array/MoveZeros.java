@@ -10,8 +10,9 @@ package Array;
  * Time Complexity: O(n²)
  * Space Complexity: O(1)
  * 
- * Optimal Approach - Two pointers:
- * Maintain two pointers, left and right. Iterate through the array with the right pointer and whenever a non-zero element is encountered, swap it with the element at the left pointer and increment both pointers.
+ * Optimal Approach :
+ * Maintain two pointers, nonZeroPointer (keeps track of the position where the next non-zero element should be placed, and another pointer i (iterates through the array). 
+ * Iterate through the array; move all non-zero elements to the front of the array while maintaining their original order using the two pointers.
  * Time Complexity: O(n)
  * Space Complexity: O(1)
  * 
