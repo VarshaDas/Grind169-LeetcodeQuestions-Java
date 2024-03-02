@@ -39,7 +39,7 @@ package BinarySearch;
  * 
  * Finally, when the search range is narrowed down to a single element (low = high), we have found the minimum element. We return nums[low].
  * 
- * Leetcode Link: https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/
+ * Leetcode Link: https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/cmd
  * 
  */
 public class MinimumInSortedRotatedArray {
