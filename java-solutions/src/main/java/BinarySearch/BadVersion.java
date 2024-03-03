@@ -13,7 +13,9 @@ package BinarySearch;
  * Space Complexity: O(1)
  * 
  * Optimal Approach:
- * Since the versions are sorted and all versions after a bad one are also bad, you can use binary search to find the first bad version efficiently.
+ * Since the versions are sorted and all versions after a bad one are also bad, you can use binary search to find the first bad version efficiently. 
+ * Check whether the element at mid is a good or bad version. If it is a good version, check in the right half of the array (as array is sorted and all versions after a bad version are also bad). 
+ * If it is a bad version, store that index(as it may be the first bad version) and then check in the left half of the array(as it may not be the first bad version).
  * 
  * Algorithm:
  * 1. Set start = 1 and end = n

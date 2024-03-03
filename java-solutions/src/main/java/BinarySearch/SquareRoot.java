@@ -12,7 +12,9 @@ package BinarySearch;
  * 
  * Optimal Approach - Binary Search:
  * Square root of a number will never be greater than the mid of that number (half of the number). 
- * Use this observation to apply binary search algorithm to find the square root within the range of 0 to x.
+ * If you use this observation the search range will reduce to half. 
+ * Now apply binary search and in each iteration, check whether square of the element at mid is equal to x. If it is greater, search in the left half, else, search in the right half of the array.
+ * 
  * Time Complexity: O(log x)
  * Space Complexity: O(1)
  * 

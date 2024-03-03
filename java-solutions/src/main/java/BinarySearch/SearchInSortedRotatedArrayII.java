@@ -15,9 +15,12 @@ package BinarySearch;
  * 
  * Optimal Approach:
  * 
- * You can use a modified binary search algorithm to find the target. Perform a binary search to find the pivot element, which is the index where the rotation occurred. 
- * Once the pivot is found, perform binary search in the appropriate half of the array based on the comparison of the target element with the first and last elements. 
- * Continue binary search until the target element is found or the search interval becomes empty.
+ * Instead of comparing the middle element with the left and right elements, you can handle the cases where the middle element is equal to the left or right elements. 
+ * If the middle element is equal to the left element, increment the left pointer. 
+ * Similarly, if the middle element is equal to the right element, decrement the right pointer. 
+ * This helps in handling duplicate elements and ensures that the search is continued towards the unsorted part of the array.
+ * 
+ * 
  * Time Complexity: O(log n)
  * Space Complexity: O(1)
  * 

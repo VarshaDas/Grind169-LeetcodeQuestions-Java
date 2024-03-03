@@ -39,6 +39,9 @@ package BinarySearch;
  * 
  * Finally, when the search range is narrowed down to a single element (low = high), we have found the minimum element. We return nums[low].
  * 
+ * Time Complexity: O(log n)
+ * Space Complexity: O(1)
+ * 
  * Leetcode Link: https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/cmd
  * 
  */
