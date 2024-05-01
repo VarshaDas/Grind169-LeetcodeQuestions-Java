@@ -1,6 +1,8 @@
 package SlidingWindow;
 
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 
 
 /*
@@ -27,34 +29,26 @@ again. We'll track the maximum length of the window as we iterate through the st
 
  */
 public class LongestSubstringWithoutRepeatingCharacters {
-
-        public int longestSubstringWithKUniqueChars(String str, int k) {
-            int start = 0; // Start pointer
-            int end = 0; // End pointer
-            HashMap<Character, Integer> charFreqMap = new HashMap<>(); // HashMap to track character frequencies
-            int maxLength = -1; // Maximum length of substring with K unique characters
-
-            while (end < str.length()) {
-                char currentChar = str.charAt(end);
-                charFreqMap.put(currentChar, charFreqMap.getOrDefault(currentChar, 0) + 1);
-
-                while (charFreqMap.size() > k) {
-                    char leftChar = str.charAt(start);
-                    charFreqMap.put(leftChar, charFreqMap.get(leftChar) - 1);
-                    if (charFreqMap.get(leftChar) == 0) {
-                        charFreqMap.remove(leftChar);
-                    }
-                    start++;
-                }
-
-                if (charFreqMap.size() == k) {
-                    maxLength = Math.max(maxLength, end - start + 1);
-                }
-
-                end++;
+    public int lengthOfLongestSubstring(String s) {
+        Set<Character> setOfUniqueCharacters = new HashSet<>();
+        int i = 0;
+        int j = 0;
+        int max = 0;
+        while(j<s.length())
+        {
+            if(!setOfUniqueCharacters.contains(s.charAt(j)))
+            {
+                setOfUniqueCharacters.add(s.charAt(j));
+                if(setOfUniqueCharacters.size()>max)
+                    max=setOfUniqueCharacters.size();
+                j++;
             }
-            return maxLength;
+            else{
+                setOfUniqueCharacters.remove(s.charAt(i));
+                i++;
+            }
         }
-
-
+        return max;
+    }
 }
+
