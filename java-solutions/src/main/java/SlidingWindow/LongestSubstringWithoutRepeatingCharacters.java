@@ -1,31 +1,34 @@
 package SlidingWindow;
 
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
 
 /*
 Brute Force Approach:
-The brute force approach involves checking every possible substring of the given string and finding the longest substring with K unique characters. Here's the step-by-step process for the brute force approach:
+Iterate through all possible starting and ending indices to generate substrings. 
+For each substring, check if all characters are unique. Keep track of the maximum length found for substrings with unique characters.
+Time Complexity: O(n³)
+Space Complexity: O(1)
 
-Initialize a variable maxLength to store the length of the longest substring.
-Iterate over every possible substring in the given string:
-Start with the first character and consider all substrings starting from that character.
-For each starting position, iterate through the string and keep track of the unique characters encountered.
-If the number of unique characters equals K, update maxLength if the current substring length is greater than maxLength.
-Return maxLength as the length of the longest substring with K unique characters.
 
-The brute force approach has a time complexity of O(n^3) as it involves three nested loops.
-It is not an efficient solution for large input sizes. The sliding window approach described earlier has a time complexity
-of O(n) and is much more efficient.
+Optimal Approach:
+Now, to solve this problem in linear time, you can use sliding window algorithm and a set to keep track of characters in the current window.
+1. Consider two pointers:
+    i : Starting index of the window.
+    j : Ending index of the window.
+Therefore, the current substring will be the string inside the window, that is, the string from i to j-1.
+2. Initialize max to store the length of the longest substring.
+3. Use a set to store the characters of the substring, as you require unique characters.
+        There can be two conditions:
+        i ) If charAt(j) is not present in the set, append it to the set. Update the max variable. Increment the position of j. 
+        ii ) If charAt(j) is present in the set, remove charAt(i) from the set. Increment the value of i.
+4. Return max
 
-Intuition for optimized approach:
-To find the longest substring with K unique characters, we can use the sliding window technique.
-We'll maintain a window of characters and keep expanding it until we have K unique characters in the window.
-If the number of unique characters exceeds K, we'll contract the window from the left side until we have K unique characters
-again. We'll track the maximum length of the window as we iterate through the string.
+Time Complexity: O(n)
+Space Complexity: O(n)
 
+Practice Link: https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
 
  */
 public class LongestSubstringWithoutRepeatingCharacters {
@@ -34,19 +37,17 @@ public class LongestSubstringWithoutRepeatingCharacters {
         int i = 0;
         int j = 0;
         int max = 0;
-        while(j<s.length())
-        {
-            if(!setOfUniqueCharacters.contains(s.charAt(j)))
-            {
+        int len = s.length();
+
+        while(j < len){
+            if(!setOfUniqueCharacters.contains(s.charAt(j))){
                 setOfUniqueCharacters.add(s.charAt(j));
-                if(setOfUniqueCharacters.size()>max)
-                    max=setOfUniqueCharacters.size();
                 j++;
-            }
-            else{
+            } else {
                 setOfUniqueCharacters.remove(s.charAt(i));
                 i++;
             }
+            max= Math.max(max, setOfUniqueCharacters.size());
         }
         return max;
     }
