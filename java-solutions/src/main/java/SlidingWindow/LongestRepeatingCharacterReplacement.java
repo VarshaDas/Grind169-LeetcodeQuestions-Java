@@ -50,9 +50,9 @@ public class LongestRepeatingCharacterReplacement {
             map1.put(curr, map1.getOrDefault(curr, 0)+1);
 
             maxRepeatCount = Math.max(maxRepeatCount, map1.get(curr));
-            int nonrepeat = (right - left + 1 ) - maxRepeatCount;
+            int leastRepeat = (right - left + 1 ) - maxRepeatCount;
 
-            if(nonrepeat > k){
+            if(leastRepeat > k){
                 map1.put(s.charAt(left), map1.get(s.charAt(left)) - 1);
                 left++;
             }
